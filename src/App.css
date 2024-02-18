@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row{
+  margin-left: 15px;
+  margin-right: 15px;
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
+}
+div[class^="column-"]{
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-flow: wrap;
+}
+.column-2{
+  width: 16.66%;
+}
+.column-8{
+  width: 66.66%;
+}
+.column-4{
+  width: 33.33%;
+}
+.column-9{
+  width: 70%;
+}
+.column-3{
+  width: 30%
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+.logo{
+  display: flex;
   align-items: center;
+}
+.ham-burger{
+  height: 20px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+.app-logo img{
+  width: 150px;
+}
+.user-info img{
+  width: 35px;
+  
+}
+.user-info{
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+}
+.align-center{
+  align-items: center;
+}
+
+.search-input{
+  width: 50%;
+  padding: 12px 12px ;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border: 1px solid #ccc;
+}
+.search-button{
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 1px solid #ccc;
+  padding: 2px 12px;
+  background-color: rgb(252, 250, 250);
+}
+.body{
+  display: flex;
+}
+.side-menu{
+  padding: 0px 20px 0px 20px;
+  background-color: rgb(254, 253, 253);
+  width: 15rem;
+  overflow-y: hidden;
+  position: sticky
+}
+.side-menu:hover{
+  overflow-y: scroll;
+}
+
+.side-menu ul{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.side-menu ul li, .you, .subscription, .explore{
+  padding-top: 10px;
+}
+.button-list{
+  display: inline-block;
+}
+.buttons{
+  padding: 6px 10px;
+  margin: 10px 0px 10px 15px;
+  border: none;
+  background-color: #dbd7d7;
+  border-radius: 4px;
+}
+.video-cart{
+  padding-top: 20px;
+}
+.video-thumbnail{
+  width: 100%;
+}
+.video-thumbnail img{
+  border-radius: 8px;
+  width: 399px;
+  height: 224px;
+}
+.video-title span{
+  display: block;
+  font-weight: 100;
+  font-size: 14px;
+  color: #606060;
+}
+.title{
+  font:bold;
+  font-family: "Roboto","Arial",sans-serif;
+  font-size: 16px;
+  color: #0f0f0f
+}
+.other-video, .watch-page{
+  width: 100%;
+}
+.watch-page{
+  padding: 25px;
+  width: 100%;
+}
+.frame{
+  border-radius: 18px;
+  padding-top: 10px;
+}
+.search-bar{
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  position: relative;
+}
+.search-suggestion {
+  position: absolute;
+  top: 66px;
+  left: 496px;
+  background-color: white;
+  width: 470px;
+  padding: 10px;
+  height: 350px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.search-suggestion ul li{
+  padding: 4px;
+}
+.search-icon{
+  font-weight: 100;
+  color: black;
+  font-size: 20px;
+  padding-right: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-suggestion li:hover{
+  background-color: rgb(224, 221, 221);
+}
+.side-video{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.side-thumbnail{
+  max-width: 178px;
+  height: 94px;
+  width: 168px;
+  border-radius: 8px;
+  margin: 6px;
+}
+.side-title{
+  margin-top: 8px;
+}
+.side-heading{
+  font-size: 14px;
+}
+.side-title span{
+  font-size: small;
+}
+.reply{
+  margin-left: 10px;
+  border-left: 1px solid pink;
+}
+.comment{
+  padding: 4px;
+  margin: 3px;
+  background-color: rgb(243, 237, 237);
+}
+.live-comment{
+  padding: 8px;
+  border: 1px solid;
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  height: 400px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.live-message{
+  display: flex;
+}
+.input{
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 4px 0;
 }
